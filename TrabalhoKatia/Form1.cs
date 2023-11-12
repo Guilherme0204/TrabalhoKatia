@@ -79,7 +79,7 @@ namespace TrabalhoKatia
             }
         }
         List<CheckOut> ck = new List<CheckOut>();
-        CheckOut checkout = new CheckOut();
+       // CheckOut checkout = new CheckOut();
         public int Codigo()
         {
             Random random = new Random();
@@ -108,7 +108,7 @@ namespace TrabalhoKatia
             salvarTxt.gravar(checkout.Info());
             MessageBox.Show(checkout.Info());
             MessageBox.Show("Informe o código da reserva para buscar informações");
-            try
+           /* try
             {
                 string data = "Server=localhost;Database=checkout;User=root;Password=guilherme123@@";
                 Conexao = new MySqlConnection(data);
@@ -121,7 +121,7 @@ namespace TrabalhoKatia
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-            }
+            }*/
             
         }
 
