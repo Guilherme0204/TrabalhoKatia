@@ -89,6 +89,7 @@ namespace TrabalhoKatia
         private void btnSalva_Click(object sender, EventArgs e)
         {
             int codigo = Codigo();
+            CheckOut checkout = new CheckOut();
 
             checkout.Unidade = cbxUnidade.SelectedItem.ToString();
             checkout.NumQuarto = txtNumQuarto.Text;
@@ -107,11 +108,11 @@ namespace TrabalhoKatia
             salvarTxt.gravar(checkout.Info());
             MessageBox.Show(checkout.Info());
             MessageBox.Show("Informe o código da reserva para buscar informações");
-            /*try
+            try
             {
                 string data = "Server=localhost;Database=checkout;User=root;Password=guilherme123@@";
                 Conexao = new MySqlConnection(data);
-                string sql = "INSERT INTO info(Unidade) " + "VALUES" + " ('" + cbxUnidade.Text + "' )";
+                string sql = "INSERT INTO info(Unidade) " + "VALUES" + " ('" + cbxUnidade.Text + "')";
                 MySqlCommand comando = new MySqlCommand(sql, Conexao);
                 Conexao.Open();
                 comando.ExecuteReader();
@@ -120,7 +121,7 @@ namespace TrabalhoKatia
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-            }*/
+            }
             
         }
 
@@ -132,12 +133,9 @@ namespace TrabalhoKatia
                 
                 if (ck[i].CPF.Equals(txtCPF.Text))
                 {
-                    MessageBox.Show(checkout.Info());
+                    MessageBox.Show(ck[i].Info());
                 }
-                else
-                {
-                    MessageBox.Show("Reserva não encontrada");
-                }
+               
             }
         }
 
