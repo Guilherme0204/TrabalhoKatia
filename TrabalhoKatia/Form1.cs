@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Drawing.Text;
 using System.Linq;
+using System.Management.Instrumentation;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
@@ -155,6 +156,18 @@ namespace TrabalhoKatia
             txtFrigo.Text = "";
             txtNumQuarto.Text = "";
             txtRestaurante.Text = "";
+        }
+
+        private void btnexcluir_Click(object sender, EventArgs e)
+        {
+            for(int i = 0; i < ck.Count;i++)
+            {
+                if (ck[i].CPF.Equals(txtCPF.Text))
+                {
+                    ck.RemoveAt(i);
+                    MessageBox.Show("Reserva excluída, não é possível encontrar dados dessa reserva mais");
+                }
+            }
         }
     }
 }

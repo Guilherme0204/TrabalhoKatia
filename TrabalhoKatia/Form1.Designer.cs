@@ -53,6 +53,7 @@
             this.txtCPF = new System.Windows.Forms.TextBox();
             this.btnLimpa = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
+            this.btnexcluir = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -290,11 +291,22 @@
             this.btnSair.UseVisualStyleBackColor = true;
             this.btnSair.Click += new System.EventHandler(this.button1_Click);
             // 
+            // btnexcluir
+            // 
+            this.btnexcluir.Location = new System.Drawing.Point(707, 614);
+            this.btnexcluir.Name = "btnexcluir";
+            this.btnexcluir.Size = new System.Drawing.Size(186, 77);
+            this.btnexcluir.TabIndex = 27;
+            this.btnexcluir.Text = "Excluir Reserva";
+            this.btnexcluir.UseVisualStyleBackColor = true;
+            this.btnexcluir.Click += new System.EventHandler(this.btnexcluir_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1798, 717);
+            this.Controls.Add(this.btnexcluir);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnLimpa);
             this.Controls.Add(this.txtCPF);
@@ -354,6 +366,7 @@
         private System.Windows.Forms.TextBox txtCPF;
         private System.Windows.Forms.Button btnLimpa;
         private System.Windows.Forms.Button btnSair;
+        private System.Windows.Forms.Button btnexcluir;
     }
 }
 
